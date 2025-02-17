@@ -35,9 +35,12 @@ public class Main {
         student[2] = new Reader("Кагарлицкий Д.С.", 9, "архитектор", "01.08.1989", "514-458");
         student[3] = new Reader("Кульбаков И.Е", 35, "кондитер", "18.09.1996", "348-557");
         student[4] = new Reader("Фирстов В.А.", 10, "программист", "19.06.2001", "452-265");
-        student[0].takeBook(3);
-        student[0].takeBook("Словарь", "Азбука", "Философия");
-        student[0].returnBook(3);
-        student[0].returnBook("Словарь", "Азбука", "Философия");
+        for(int i = 0;i < 5; i++){
+            student[i].takeBook("Словарь", "Азбука", "Философия");
+            student[i].takeBook(3);
+            student[i].returnBook("Словарь", "Азбука", "Философия");
+            student[i].returnBook(3); ;
+
+        }
     }
 }
