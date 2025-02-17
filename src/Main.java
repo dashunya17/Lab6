@@ -17,7 +17,6 @@ class  Reader {
     }
     void takeBook(String... name_book){
         String book = String.join(", ", name_book); // string.join метод, который автоматичнски разделяет
-
         System.out.println(FIO + " взял книги: " + book);
     }
     void returnBook(String... name_book1){
