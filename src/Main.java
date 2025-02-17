@@ -15,11 +15,14 @@ class  Reader {
     void takeBook(int number_books){
         System.out.println(FIO + "взял(а) " + number_books + " книг(и) ");
     }
-    void takeBook(String name_book){
-        System.out.println(FIO + " взял(а) " + name_book);
+    void takeBook(String... name_book){
+        String book = String.join(", ", name_book); // string.join метод, который автоматичнски разделяет
+
+        System.out.println(FIO + " взял книги: " + book);
     }
-    void returnBook(String name_book1){
-        System.out.println(FIO + " вернул(а) книгу(и) "+ name_book1);
+    void returnBook(String... name_book1){
+        String book1 = String.join(", ", name_book1); // string.join метод, который автоматичнски разделяет
+        System.out.println(FIO + " вернул(а) книгу(и) "+ book1);
     }
     void returnBook(int number_boos1){
         System.out.println(FIO+ " вернул(а) " + number_boos1 +" книгу(и)");
@@ -34,8 +37,8 @@ public class Main {
         student[3] = new Reader("Кульбаков И.Е", 35, "кондитер", "18.09.1996", "348-557");
         student[4] = new Reader("Фирстов В.А.", 10, "программист", "19.06.2001", "452-265");
         student[0].takeBook(3);
-        student[0].takeBook("Словарь, Азбука, Философия");
+        student[0].takeBook("Словарь", "Азбука", "Философия");
         student[0].returnBook(3);
-        student[0].returnBook("Словарь, Азбука, Философия");
+        student[0].returnBook("Словарь", "Азбука", "Философия");
     }
 }
